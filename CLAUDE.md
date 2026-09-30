@@ -109,7 +109,7 @@ Units        px, %, auto — nothing else
 | `rem`, `em`, `vw`, `calc()`, CSS variables | not in this course | px and % only |
 | `box-sizing`, `:root`, `*` selector, `!important`, pseudo-elements | not taught | `!important` in particular undoes the specificity lesson. Never. |
 | Frameworks (Bootstrap, Tailwind), preprocessors, resets | not in this course | — |
-| Inline `style="…"` attributes and `<style>` blocks | superseded this week | The Week 3 `<style>` trick is *removed* on slide s3-debt. Never reintroduce. |
+| Inline `style="…"` attributes and `<style>` blocks | superseded this week | The Week 3 `<style>` trick is deleted at stage 5a and repaid in style.css on slide s3-debt. Never reintroduce. |
 | JavaScript, `<script>`, event attributes | **Week 5** | Not even to demonstrate `:hover`'s JS equivalent. |
 | Server code, form handling, what happens after submit | **Week 8** | Say "Week 8" and stop. |
 | Custom domains, DNS, CNAME files, GitHub Actions workflows, git CLI | **Week 12** | Browser upload only. No terminal. |
@@ -166,13 +166,13 @@ block sub-stages of stage 6 are cumulative snapshots of one `style.css`.
 | Stage | Deck slide(s) | Folder | State |
 |---|---|---|---|
 | 4 | s1-before | `/stages/stage-4/` | Week 3's endpoint: one flat `index.html` with the Activity 2 form appended and the `<style>` border trick |
-| 5a | s1-div-code, s1-div-result | `/stages/stage-5a-div/` | Three pages; regions as `<div id="header|nav|main|footer">`; identical nav list; no CSS |
+| 5a | s1-div-code, s1-div-result | `/stages/stage-5a-div/` | Three pages; regions as `<div id="header|nav|main|footer">`; identical nav list; no CSS — the Week 3 `<style>` is deleted here, so the table loses its borders until 6·4 |
 | 5b | s1-shift, s1-both-valid, s1-site-map | `/stages/stage-5b-semantic/` | Same, regions as `header nav main footer`; pixel-identical to 5a |
 | 6·0 | s2-link | `/stages/stage-6-block-0/` | 5b + `style.css` containing **only** `h1 { color: #064E4F; }` + link in three heads |
 | 6·1 | s2-first-rules | `/stages/stage-6-block-1/` | + body font/colour/background, h1, h2 (element selectors) |
 | 6·2 | s2-our-selectors, s2-result | `/stages/stage-6-block-2/` | + ids, classes, descendant, child, :hover, a.current; HTML gains ids and classes |
 | 6·3 | s3-text, s3-result | `/stages/stage-6-block-3/` | + h1 size and transform, footer colours, font-size |
-| 6·4 | s3-debt, s4-code, s4-result | `/stages/stage-6-block-4/` | + table rules (Week 3 `<style>` removed), main box, .dish cards, padding; book.html gains validation attributes |
+| 6·4 | s3-debt, s4-code, s4-result | `/stages/stage-6-block-4/` | + table rules (the Week 3 `<style>` debt from 5a, repaid in style.css), main box, .dish cards, padding; book.html gains validation attributes |
 | 6·5 | s5-display, s5-align, s5-result | `/stages/stage-6-block-5/` = `/stages/stage-6-styled/` | + nav bar, margin: auto, text-align, float, h2 margin fix. **Final.** |
 
 `style.css` in the final stage is written in five commented blocks, in this order, and each block
@@ -278,7 +278,7 @@ stage is a bug.
 |---|---|---|---|---|---|
 | 00 | hook | Open | stage-4 (no edit) | — | stage-4 index.html next to a real restaurant site in another tab |
 | 01 | s1-before | 1 | stage-4 (no edit) | — | The flat page; lecturer points at what is missing (name, nav, address) |
-| 02 | s1-div-code | 1 | stage-4 → stage-5a | Wrap body in four `div id=` regions; add the nav `ul`; split into three files | Nothing visibly changes except the nav list appearing — say so |
+| 02 | s1-div-code | 1 | stage-4 → stage-5a | Delete the Week 3 `<style>` block; wrap body in four `div id=` regions; add the nav `ul`; split into three files | Nothing visibly changes except the nav list appearing and the table borders vanishing — say so, and say the border comes back in Part 3 |
 | 03 | s1-shift | 1 | stage-5a → stage-5b | Four find-and-replace: `<div id="header">`→`<header>` etc. and closers | Pixel-identical; open 5a and 5b side by side |
 | 04 | s1-site-map | 1 | stage-5b (no edit) | — | Three tabs, click through the nav |
 | 05 | s2-link | 2 · 1 | stage-5b → stage-6-block-0 | Create `style.css` with the h1 rule; add the `link` to three heads | Three headings turn teal on one save |
@@ -287,7 +287,7 @@ stage is a bug.
 | 08 | s2-specificity | 2 · 3 | block-2 + `variants/` | Append `a { color: red; }` at the bottom; refresh; change to `a.current { color: red; }` | Red does *not* win the first time; wins the second. Variants: `try-red-element.css`, `try-red-class.css` |
 | 09 | s3-colour | 3 · 4 | `variants/colours.html` | — | One page with five `p`s, same red written five ways, plus the `#064E4F` breakdown |
 | 10 | s3-text | 3 · 4 | block-2 → block-3 | h1 size/transform, footer, font-size | OUR MENU uppercase; teal footer band |
-| 11 | s3-debt | 3 · 4 | block-3 → block-4 (table + book.html part) | Move the Week 3 `<style>` rule into style.css, delete the `<style>` tag, add `border-collapse`; add `required`/`min`/`max` | Double table line becomes single; empty submit refused with the browser's own message |
+| 11 | s3-debt | 3 · 4 | block-3 → block-4 (table + book.html part) | Type the table border rule (the Week 3 rule, deleted at 5a) into style.css, save; then add `border-collapse`; add `required`/`min`/`max` | Borders return doubled, then become single; empty submit refused with the browser's own message |
 | 12 | s4-code | 4 · 5 | block-3 → block-4 (box part) + `variants/` | main box, .dish cards, padding | Content boxed; cards mist. Variants: `try-padding-0.css`, `try-margin-0.css` — which gap disappears |
 | 13 | s4-sizes | 4 · 5 | block-4 (no edit) | — | DevTools box diagram on `main` showing 770 not 720 |
 | 14 | s5-block-inline | 5 · 6 | `variants/flow.html` | Change the middle `span` to a `div` | Sentence three moves too. This is [OUT] Lesson 5's demo verbatim: three Lorem-ipsum sentences in spans inside a div |
