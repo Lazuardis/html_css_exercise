@@ -181,7 +181,9 @@ block sub-stages of stage 6 are cumulative snapshots of one `style.css`.
 | 6·5 | s5-display, s5-align, s5-result | `/stages/stage-6-block-5/` = `/stages/stage-6-styled/` | + nav bar, margin: auto, text-align, float, h2 margin fix. **Final.** |
 
 `style.css` in the final stage is written in five commented blocks, in this order, and each block
-sub-stage is the file truncated after that block. When you generate a block sub-stage, truncate;
+sub-stage is the file truncated after that block. Within a block, rules sit in the order the deck's
+code panels type them (block 4: s3-debt's table rules, then s4-code; block 5: s5-display, then
+s5-align, with `header, footer` grouped as on the slide), so every live edit is an append. When you generate a block sub-stage, truncate;
 never rewrite. `gen_site.py` in `/tools/` regenerates 5a/5b/6 from one source; it is a
 convenience for the lecturer, not a build step, and the committed HTML is the source of truth.
 

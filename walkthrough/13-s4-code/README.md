@@ -4,8 +4,7 @@
 **start/** = walkthrough 11's `end/` (12 has no end/) · **end/** = `/stages/stage-6-block-4/`
 byte for byte. Line 1 of each file (the slide comment) is not typed live.
 
-## Typed live — style.css, inside block 4
-Between the `/* ===== 4. Box model (§4) ===== */` header and `table, th, td`:
+## Typed live — at the bottom of style.css, after the table rules, in the slide's order
 1. ```
    main {
      width: 720px;
@@ -25,7 +24,7 @@ Between the `/* ===== 4. Box model (§4) ===== */` header and `table, th, td`:
    ```
    Ctrl+S — two mist cards. `min-height` changes nothing yet; it is needed when the image
    floats in Part 5.
-3. After the `th` rule: `footer {` / `padding: 16px 24px;` / `}`. Ctrl+S.
+3. `footer {` / `padding: 16px 24px;` / `}`. Ctrl+S.
 
 ## Try it (the slide's box)
 - `.dish` padding → `0px`, save: the text touches the card's edge. Restore.

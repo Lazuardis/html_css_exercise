@@ -68,6 +68,19 @@ footer {
 
 /* ===== 4. Box model (§4) ===== */
 
+table, th, td {
+  border: 1px solid #5F7171;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px 16px;
+}
+
+th {
+  background-color: #E8EFEF;
+}
+
 main {
   width: 720px;
   padding: 24px;
@@ -79,19 +92,6 @@ main {
   padding: 16px;
   margin-bottom: 24px;
   border: 1px solid #B9CECE;
-  background-color: #E8EFEF;
-}
-
-table, th, td {
-  border: 1px solid #5F7171;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 8px 16px;
-}
-
-th {
   background-color: #E8EFEF;
 }
 
@@ -111,17 +111,17 @@ nav li {
   margin-right: 24px;
 }
 
+nav {
+  text-align: center;
+}
+
 main {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
 }
 
-header {
-  text-align: center;
-}
-
-nav {
+header, footer {
   text-align: center;
 }
 
@@ -133,8 +133,4 @@ nav {
 
 .dish h2 {
   margin-top: 0px;
-}
-
-footer {
-  text-align: center;
 }
