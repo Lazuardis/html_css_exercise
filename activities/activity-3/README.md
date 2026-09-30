@@ -26,8 +26,8 @@ green tick, then refresh. **Do not re-upload** — that restarts the clock.
 
 ## Check — 4 minutes
 1. Are all pages reachable from the nav, with style and images on each?
-2. Press **Book a table.** What happens, and why? (A 404: GitHub Pages is static hosting — it
-   serves files and runs no code, so nothing can receive the form. The server is Week 8.)
+2. Press **Book a table.** What happens, and why? (An error page from GitHub: Pages is static
+   hosting — it serves files and runs no code, so nothing can receive the form. The server is Week 8.)
 3. Post your address in the class channel. One line: the URL, then which of the four
    pitfalls you hit, or "none".
 4. Open a classmate's link. Does it load faster or slower than yours? Guess why.
