@@ -3,12 +3,11 @@
 **Deck:** Part 3 · **Indicator:** 4 (form half: Week 3 promise, Week 8 caveat) · **Time:** 4 min
 **start/** = `/stages/stage-6-block-3/` · **end/** = no stage of its own: the HTML equals
 `/stages/stage-6-block-4/` (line 1 aside); `style.css` is block 3 plus the block-4 header and
-the three table rules. Walkthrough 12 completes block 4.
+the three table rules. Walkthrough 13 completes block 4.
 
-## Before you start — the seed differs from the deck notes
-The notes say "paste the Week 3 style-tag rule into style.css, delete the style tag from
-index.html". In the seed the `<style>` was already deleted at stage 5a (walkthrough 02), and
-the table has had no borders since. So the rule is *typed back*, not moved.
+## Before you start
+The Week 3 `<style>` went at stage 5a (walkthrough 02); the table has had no borders since.
+The rule is typed back into style.css — the debt promised in Part 1, repaid here.
 
 ## Typed live — style.css, after block 3
 1. Block header: `/* ===== 4. Box model (§4) ===== */`

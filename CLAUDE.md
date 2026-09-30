@@ -9,6 +9,10 @@ production web pages. A file that is technically better but uses something not y
 worse file for this repo. Week 3's CLAUDE.md governed a folder of plain `.html`; this one adds a
 stylesheet, a three-page site, and a deployment target — and the same discipline.
 
+**Order of authority.** The deck is the top reference, then this file. Within the deck, the
+screenshots and code panels outrank the speaker notes: a note that contradicts what the slide
+shows is corrected, not followed. Where this file and the deck disagree, flag it and change this file.
+
 ---
 
 ## 1. Course facts
@@ -76,7 +80,7 @@ Week 4 adds the following and nothing else.
 ```
 Regions      <header>  <nav>  <main>  <footer>        — the four site regions, one each per page
 Grouping     <div>  <span>                            — generic; div for the dish cards, span only in
-                                                        the document-flow demo (§7, 11-s5-block-inline)
+                                                        the document-flow demo (§7, 14-s5-block-inline)
 Attributes   class="..."   id="..."                   — id unique per page; class shared
 Head         <link rel="stylesheet" href="style.css">  — now real, one per page, in head
 Validation   required   min="..."  max="..."           — on the three book.html inputs only
@@ -207,13 +211,14 @@ attributes last, label before input, blank line between blocks). Additions:
   `main`) — that is deliberate: it shows that later declarations add to earlier ones.
 - One declaration per line, two-space indent, a space after the colon, semicolon on every line
   including the last. The slide code panels compress rules to one line to fit; **files never do**.
-- Property order within a rule: colour/text first, then box (width, padding, margin, border),
-  then flow (display, float, text-align). Not enforced by a tool; enforced by reading.
+- Property order within a rule: as the deck's code panel shows it — the deck is the reference,
+  because students type from it. Where no panel shows the rule: colour/text first, then box
+  (width, padding, margin, border), then flow (display, float, text-align).
 - Comments: `/* ===== N. Title (§part) ===== */` as block headers, nothing else. No commented-out
   rules left behind.
 - No blank rules, no rules that match nothing (except in a broken demo, §8).
 - Colours as `#RRGGBB` uppercase in `style.css`. `rgb()`, `rgba()`, `hsl()` and names appear
-  only in the colour demo (§7, 07-s3-colour).
+  only in the colour demo (§7, 09-s3-colour).
 
 ### Files
 - UTF-8, LF, final newline, no BOM. Lowercase file names, always — the deployment target is
@@ -250,7 +255,7 @@ README.md           folder map for a teaching assistant
   `style.css`) so they match the projector.
 - A solution file is `*-solution.*` and never sits inside a starter folder.
 - Every `.html` and `.css` file opens with a comment naming the **deck slide id**, the indicator
-  (or "Part 1 / Part 6, not RPS"), and its role (`start`, `end`, `variant`, `broken`, `correct`).
+  (or "Part 1 / Part 6, not RPS"), and its role (`start`, `end`, `final`, `variant`, `broken`, `correct`).
   In CSS: `/* slide: s2-link · indicator 1 · end state */`.
 
 ---
@@ -286,20 +291,21 @@ stage is a bug.
 | 06 | s2-first-rules | 2 · 1 | block-0 → block-1 | body, h1, h2 rules | Font and colours change on all pages |
 | 07 | s2-our-selectors | 2 · 2 | block-1 → block-2 | Add ids/classes to HTML first, then the six rules | Site name large, prices amber, current bold, hover underline |
 | 08 | s2-specificity | 2 · 3 | block-2 + `variants/` | Append `a { color: red; }` at the bottom; refresh; change to `a.current { color: red; }` | Red does *not* win the first time; wins the second. Variants: `try-red-element.css`, `try-red-class.css` |
-| 09 | s3-colour | 3 · 4 | `variants/colours.html` | — | One page with five `p`s, same red written five ways, plus the `#064E4F` breakdown |
+| 09 | s3-colour | 3 · 4 | `variants/colours.html` | — | One page with five `p`s: one red written five ways as on the slide (named, rgb, rgba at 0.8, hex, hsl), plus the `#064E4F` breakdown |
 | 10 | s3-text | 3 · 4 | block-2 → block-3 | h1 size/transform, footer, font-size | OUR MENU uppercase; teal footer band |
 | 11 | s3-debt | 3 · 4 | block-3 → block-4 (table + book.html part) | Type the table border rule (the Week 3 rule, deleted at 5a) into style.css, save; then add `border-collapse`; add `required`/`min`/`max` | Borders return doubled, then become single; empty submit refused with the browser's own message |
-| 12 | s4-code | 4 · 5 | block-3 → block-4 (box part) + `variants/` | main box, .dish cards, padding | Content boxed; cards mist. Variants: `try-padding-0.css`, `try-margin-0.css` — which gap disappears |
-| 13 | s4-sizes | 4 · 5 | block-4 (no edit) | — | DevTools box diagram on `main` showing 770 not 720 |
-| 14 | s5-block-inline | 5 · 6 | `variants/flow.html` | Change the middle `span` to a `div` | Sentence three moves too. This is [OUT] Lesson 5's demo verbatim: three Lorem-ipsum sentences in spans inside a div |
+| 12 | s4-sizes | 4 · 5 | block-4 (no edit) | — | DevTools box diagram on `main` showing 770 not 720. Deck order puts it before s4-code, so it opens the prebuilt block-4 |
+| 13 | s4-code | 4 · 5 | 11 end → block-4 (box part) + `variants/` | main box, .dish cards, padding | Content boxed; cards mist. Variants: `try-padding-0.css`, `try-margin-0.css` — which gap disappears |
+| 14 | s5-block-inline | 5 · 6 | `variants/flow.html` | Change the middle `span` to a `div` | Sentence three moves too. [OUT] Lesson 5's demo in the slide's words: "Sentence one.", "Sentence two.", "Sentence three." in spans inside a div |
 | 15 | s5-display | 5 · 6 | block-4 → block-5 (nav part) | `nav ul`, `nav li`, `nav` rules — `display: inline` typed last | Stack becomes a row on one save |
 | 16 | s5-align | 5 · 6 | block-5 (nav) → block-5 final + `variants/` | main margins auto, text-align, float, h2 margin | main jumps to centre. Variant `try-no-width.css`: delete width → back to the left |
-| 17 | s5-old-way | 5 | `variants/float-header.html` + `.css` | Float site name left, nav right in the header | Header collapses to zero height — the motivation for flexbox. Not fixed. |
+| 17 | s5-old-way | 5 | `variants/float-header.html` + `.css` | Float site name left, tagline right — the two things the header holds | Header collapses to zero height — the motivation for flexbox. Not fixed. |
 | 18 | s6-process | 6 | `/deploy/` (no edit) | Browser only: new repo → upload → Settings → Pages | The live URL. Screenshots captured the morning of class into `README.md` |
 | 19 | s6-pitfalls | 6 | `variants/` | — | `fault-Location.html` (capitalised) with a lowercase link to it; `fault-href-absolute.html` with a `file:///` href; `fault-index-in-folder/` |
 
-Walkthroughs 00, 01, 04, 13 and 18 have no live edit; their folder is a README plus `start/`
-only. Build the numbered folders **in order**; each `start/` is the previous `end/`.
+Walkthroughs 00, 01, 04, 12 and 18 have no live edit; their folder is a README plus `start/`
+only. Build the numbered folders **in order**; each `start/` is the previous `end/` — except 12,
+which opens the prebuilt block-4, and 18–19, which open `/deploy/`. Numbering follows deck order.
 
 ---
 
@@ -345,7 +351,7 @@ DevTools width of main · shrink the window — what breaks first (say "media qu
 is the nav still a `ul`.
 
 Solution: block-5 final. `check-answers.md` must say for check 3: *nothing here fixes it; that is
-indicator 8, deferred.* Fast finisher: the collapsed-header float (walkthrough 17).
+indicator 8, deferred.* Fast finisher: site name left, tagline right — the collapsed-header float (walkthrough 17).
 
 ### Activity 3 — Deploy (12 min, slide act3)
 Everyone. Five steps from slide s6-process on the student's own folder. Check: all pages reachable
@@ -370,8 +376,8 @@ at the student's published URL. Do not write a homework exemplar or rubric until
 2. All file names lowercase; all `href` and `src` values match the file name exactly.
 3. Relative paths only, same folder, no leading `/`, no `file://`, no `..`.
 4. No build step, no `package.json`, no `_config.yml`, no `.nojekyll` needed. Plain files.
-5. The booking form's `action="/book"` stays as taught. It will 404 on GitHub Pages, and slide
-   s6-limits says why. Do not change it to make deployment "work".
+5. The booking form's `action="/book"` stays as taught. Submitting it fails on GitHub Pages (an error page — confirm the exact status code on the day),
+   and slide s6-limits says why. Do not change it to make deployment "work".
 6. Nothing in `/deploy/` that should not be on a billboard: no notes, no answer keys, no
    broken variants.
 
@@ -389,6 +395,7 @@ to check the Actions tab, not to re-upload.
 - JavaScript, making `:hover` do something → **Week 5**
 - Components, one header in one file → **Week 7**; a CMS doing it for you → **Week 9**
 - The server receiving the form, real validation → **Week 8**
+- What a repository is, beyond "a folder that remembers its history" → **Week 6** (slide s6-process)
 - Custom domains, pointing a bought name at the Pages site, git and the CLI → **Week 12**
 - ARIA → out of scope this semester. The semantic four are landmarks; that is the accessible win.
 

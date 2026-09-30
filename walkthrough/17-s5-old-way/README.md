@@ -31,9 +31,8 @@ No clearfix, no overflow trick. The fix is flexbox: supplementary CSS session, i
 date announced in Week 5. Say the week, not "later". Reset: re-copy `float-header.css`.
 
 ## Note
-The slide and Activity 2 say "float the site name left and the nav right, in the same
-header". In the canon the nav is its own region after the header, not inside it, and
-moving it breaks the region order. So the demo floats the two things the header does hold.
+Same exercise as the Activity 2 fast finisher: site name left, tagline right — the only two
+things in the header, so floating both leaves it holding nothing.
 
 ## Fault to expect
 Only one float typed: the header keeps the tagline's height (18px). It takes both.

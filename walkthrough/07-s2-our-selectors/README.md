@@ -28,4 +28,3 @@ until hovered, and the current page's link in bold. Hover over a nav link to sho
 ## Fault to expect
 `class="current"` on Menu on all three pages (the deck notes say students do this).
 Click through: Menu stays bold everywhere. One page, one current link.
-The slide's title says "six selectors"; there are seven rules — six kinds plus `a.current`.

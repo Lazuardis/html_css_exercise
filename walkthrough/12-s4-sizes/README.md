@@ -1,12 +1,12 @@
-# 13 · s4-sizes — "Each box is the one inside it plus its own two sides"
+# 12 · s4-sizes — "Each box is the one inside it plus its own two sides"
 
 **Deck:** Part 4 · **Indicator:** 5 · **Time:** 3 min
-**Folder:** README + `start/` only — no live edit. `start/` = `/stages/stage-6-block-4/`.
+**Folder:** README + `start/` only — no live edit. `start/` = `/stages/stage-6-block-4/`,
+the state *after* walkthrough 13 — the one exception to "start/ = previous end/".
 
-## Deck order — read this first
-In the deck this slide comes **before** s4-code (walkthrough 12). When it appears, your
-working copy does not yet have the `main` rule. Open this folder's `start/`, not the
-working copy.
+## Open this folder, not the working copy
+This slide comes before s4-code (walkthrough 13), so your working copy does not yet have
+the `main` rule. The worked example needs it; `start/` has it.
 
 ## Open when the slide appears
 `start/index.html` in the browser. F12 → Elements → click `<main>` → the box diagram

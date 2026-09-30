@@ -30,10 +30,9 @@ It must be: `nav > ul > li > a`. CSS changed how it looks, not what it is. A nav
 three links in a `p` fails this check even if it looks the same.
 
 ## Fast finishers
-- Site name left, nav right, in the same header: the header collapses to height 0, because
-  floats take no height. Walkthrough 17 and `/demos/collapsed-header-broken.*` show it.
-  That problem is why flexbox exists. Leave it unfixed. (Little Lemon's nav is its own
-  region, not inside the header, so the demo floats the site name and the tagline instead.)
+- Site name left, tagline right: the header collapses to height 0, because floats take no
+  height and nothing else is left in it. Walkthrough 17 and `/demos/collapsed-header-broken.*`
+  show it. That problem is why flexbox exists. Leave it unfixed.
 - Current link with a bottom border instead of bold, for example
   `a.current { border-bottom: 2px solid #0067AC; }` — still visible without hovering.
 

@@ -27,5 +27,4 @@ Only the opening tag changed (`<div>Sentence two.</span>`): the browser drops th
 it looks as if sentence three did *not* move. Fix the closing tag and save.
 
 ## Note
-CLAUDE.md §7 describes this demo as [OUT] Lesson 5 verbatim with Lorem-ipsum sentences.
-The file uses the slide's own words ("Sentence one." …) so the screen matches the projector.
+The sentences are the slide's own words ("Sentence one." …), so the screen matches the projector.
