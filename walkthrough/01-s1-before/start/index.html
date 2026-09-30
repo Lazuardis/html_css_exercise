@@ -1,0 +1,62 @@
+<!-- slide: s1-before · Week 3 endpoint · start of Part 1 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Little Lemon</title>
+    <meta name="description" content="Middle Eastern food in the Main District.">
+    <meta name="author" content="Lazuardi Al-Muzaki">
+    <style>
+      table, th, td { border: 1px solid black; }
+    </style>
+  </head>
+  <body>
+    <h1>Our Menu</h1>
+
+    <h2>Falafel</h2>
+    <p>Chickpea, herbs, and spices</p>
+    <img src="falafel.jpeg" width="240" height="135" alt="A falafel">
+
+    <h2>Pasta Salad</h2>
+    <p>Lettuce, vegetables, and mozzarella</p>
+    <img src="salad.jpeg" width="240" height="135" alt="A pasta salad">
+
+    <table>
+      <tr>
+        <th>Dish</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>Falafel</td>
+        <td>$10</td>
+      </tr>
+      <tr>
+        <td>Pasta Salad</td>
+        <td>$12</td>
+      </tr>
+    </table>
+
+    <p><a href="location.html">Our Location</a></p>
+
+    <h2>Book a table</h2>
+    <form action="/book" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+      <br>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+      <br>
+      <label for="party">Party size</label>
+      <input type="number" id="party" name="party">
+      <br>
+      <input type="radio" id="indoor" name="seating" value="indoor">
+      <label for="indoor">Indoor</label>
+      <input type="radio" id="outdoor" name="seating" value="outdoor">
+      <label for="outdoor">Outdoor</label>
+      <br>
+      <label for="requests">Special requests</label>
+      <textarea id="requests" name="requests" rows="3"></textarea>
+      <br>
+      <input type="submit" value="Book a table">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+/* slide: s2-specificity · indicator 3 · broken on purpose — a { color: red; } appended last, and it still loses to header a and nav > ul > li > a */
+/* Little Lemon — style.css
+   Built in class order. Each block is added on one deck section. */
+
+/* ===== 1. A first rule: element selectors (§2) ===== */
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #1C2B2B;
+  background-color: #FCFDFC;
+}
+
+h1 {
+  color: #064E4F;
+}
+
+h2 {
+  color: #064E4F;
+}
+
+/* ===== 2. Selectors: id, class, descendant, child, :hover (§2) ===== */
+
+#site-name {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#tagline {
+  color: #5F7171;
+  font-style: italic;
+}
+
+.price {
+  font-weight: bold;
+  color: #B86B00;
+}
+
+header a {
+  color: #064E4F;
+  text-decoration: none;
+}
+
+nav > ul > li > a {
+  color: #0067AC;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+a.current {
+  font-weight: bold;
+}
+
+a {
+  color: red;
+}

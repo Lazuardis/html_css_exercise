@@ -1,0 +1,47 @@
+/* slide: s3-colour · indicator 4 · variant — the only stylesheet where names, rgb(), rgba() and hsl() appear */
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #1C2B2B;
+  background-color: #FCFDFC;
+}
+
+h1 {
+  color: #064E4F;
+}
+
+h2 {
+  color: #064E4F;
+}
+
+#named, #rgb, #rgba, #hex, #hsl {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#named {
+  color: red;
+}
+
+#rgb {
+  color: rgb(255, 0, 0);
+}
+
+#rgba {
+  color: rgba(255, 0, 0, 0.8);
+}
+
+#hex {
+  color: #FF0000;
+}
+
+#hsl {
+  color: hsl(0, 100%, 50%);
+}
+
+#teal {
+  color: #FCFDFC;
+  background-color: #064E4F;
+  font-size: 32px;
+  padding: 16px;
+}

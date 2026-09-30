@@ -141,6 +141,7 @@ Price list     h2 "Price list" precedes the table on index.html
 Current page   class="current" on the nav <a> for the page you are on — a different link per page
 Validation     name: required · email: required · party: min="1" max="12" required
 Stylesheet     style.css, same folder as the pages, linked from every head
+Demo-only ids  named · rgb · rgba · hex · hsl · teal — walkthrough 09's colours.html only, never on a site page
 ```
 
 ### The palette — the only colours in style.css

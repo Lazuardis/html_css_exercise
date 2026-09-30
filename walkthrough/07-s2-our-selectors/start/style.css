@@ -1,0 +1,20 @@
+/* slide: s2-first-rules · indicator 1 · end state */
+/* Little Lemon — style.css
+   Built in class order. Each block is added on one deck section. */
+
+/* ===== 1. A first rule: element selectors (§2) ===== */
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #1C2B2B;
+  background-color: #FCFDFC;
+}
+
+h1 {
+  color: #064E4F;
+}
+
+h2 {
+  color: #064E4F;
+}
+
