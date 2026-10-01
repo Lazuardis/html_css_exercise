@@ -187,8 +187,10 @@ s5-align, with `header, footer` grouped as on the slide), so every live edit is 
 never rewrite. `gen_site.py` in `/tools/` regenerates 5a/5b/6 from one source; it is a
 convenience for the lecturer, not a build step, and the committed HTML is the source of truth.
 
-Images: `falafel.jpeg` and `salad.jpeg` are 240×135 placeholder JPEGs. Keep them; the float demo
-needs real dimensions.
+Images: `falafel.jpeg` and `salad.jpeg` are 240×135 JPEG photos, a 16:9 band cropped from the
+lecturer's 1200×1800 originals (`falafel-image.jpg`, `salad-image.jpg`, kept outside the repo).
+Every copy in the repo is byte-identical. Keep 240×135 exactly: the `width`/`height` attributes,
+the float demo and the 770px box arithmetic all assume it.
 
 ---
 
